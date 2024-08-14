@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, {useState} from 'react'
 import * as Yup from 'yup'
 
 const PassswordSchema = Yup.object().shape({
@@ -9,6 +9,20 @@ const PassswordSchema = Yup.object().shape({
   .required('Length is required')
 })
 export default function App() {
+  const [password, setPassword] = useState('')
+  const [isPasswordGenerated,setIsPasswordGenerated] = useState(false)
+  const [lowerCase, setLowerCase] = useState(true)
+  const [upperCase, setUpperCase] = useState(false)
+  const [numbers, useNumbers] = useState(false)
+  const [symbols, useSymbols] = useState(false)
+  
+  const generatePasswordString = (passwordLength: number)=>{
+
+  }
+  const createPassword = (character: string, passwordLength: number)=>{
+
+  }
+  const resetPasswordState = ()=>{}
   return (
     <View>
       <Text>App</Text>
