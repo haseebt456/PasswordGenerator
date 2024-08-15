@@ -20,7 +20,13 @@ export default function App() {
 
   }
   const createPassword = (character: string, passwordLength: number)=>{
-
+    let result = ''
+    for(let i=0; i < passwordLength; i++)
+    {
+      const characterIndex = Math.round(Math.random()+character.length)
+      result += character.charAt(characterIndex)
+    }
+    return result
   }
   const resetPasswordState = ()=>{}
   return (
